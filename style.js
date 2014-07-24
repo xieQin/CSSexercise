@@ -48,4 +48,43 @@ $(document).ready(function($) {
     		$(this).removeClass('hoverSecond');
     	}
     })
+
+    function memfactorial(n) {
+    	if(!memfactorial.cache) {
+    		memfactorial.cache = {
+    			"0" : 1,
+    			"1" : 1
+    		};
+    	}
+    	if(!memfactorial.cache.hasOwnProperty(n)) {
+    		memfactorial.cache[n] = n * memfactorial(n-1);
+    	}
+    	return memfactorial.cache[n];
+    }
+
+    var fact = memfactorial(6);
+
+    // var a = new Date();
+    // var x = a.getTime();
+
+    // for(var i = 0 ; i< 100000; i++) {
+    // 	function () {
+    // 		;
+    // 	}
+    // }
+
+    // var b = new Date();
+    // var y = b.getTime();
+    // alert(y-x);
+
+    // var a = new Date();
+    // var x = a.getTime();
+
+    // for(var i = 0 ; i< 100000; i++) {
+    // 	new Function();
+    // }
+
+    // var b = new Date();
+    // var y = b.getTime();
+    // alert(y-x);
 })
