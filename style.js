@@ -87,4 +87,20 @@ $(document).ready(function($) {
     // var b = new Date();
     // var y = b.getTime();
     // alert(y-x);
+    // document.write([2, 3, 1, 4, 5, 6].sort());
+    var a = new Object();
+    var b = new Object();
+    var c = new Object();
+    a.id = 1;
+    b.id = 2;
+    c.id = 3;
+    a.date = new Date(2012, 3, 12);
+    b.date = new Date(2012, 1, 15);
+    c.date = new Date(2012, 2, 10);
+    var arr = [a, b, c];
+    arr.sort(
+    	function (x, y) {
+    		return x.date - y.date;
+    	}
+    );
 })
